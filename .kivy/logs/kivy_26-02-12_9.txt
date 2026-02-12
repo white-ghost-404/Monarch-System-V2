@@ -1,0 +1,81 @@
+[INFO   ] Logger: Record log in /data/data/com.termux/files/home/.kivy/logs/kivy_26-02-12_9.txt
+[INFO   ] Kivy: v2.3.0
+[INFO   ] Kivy: Installed at "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.12.12 (main, Jan 18 2026, 04:37:25) [Clang 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f0
+[INFO   ] Python: Interpreter at "/data/data/com.termux/files/usr/bin/python"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] KivyMD: 1.2.0, git-Unknown, 2026-02-11 (installed at "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivymd/__init__.py")
+[WARNING] KivyMD: Version 1.2.0 is deprecated and is no longer supported. Use KivyMD version 2.0.0 from the master branch (pip install https://github.com/kivymd/KivyMD/archive/master.zip)
+[INFO   ] Factory: 195 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Text: Provider: sdl2(['text_pango'] ignored)
+[INFO   ] Window: Provider: sdl2(['window_egl_rpi'] ignored)
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.5 (Compatibility Profile) Mesa 25.3.0'>
+[INFO   ] GL: OpenGL vendor <b'Mesa'>
+[INFO   ] GL: OpenGL renderer <b'llvmpipe (LLVM 21.1.5, 128 bits)'>
+[INFO   ] GL: OpenGL parsed version: 4, 5
+[INFO   ] GL: Shading version <b'4.50'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Clipboard: Provider: sdl2(['clipboard_xclip', 'clipboard_xsel', 'clipboard_dbusklipper', 'clipboard_gtk3'] ignored)
+[CRITICAL] Cutbuffer: Unable to find any valuable Cutbuffer provider. Please enable debug logging (e.g. add -d if running from the command line, or change the log level in the config) and re-run your app to identify potential causes
+xclip - FileNotFoundError: [Errno 2] No such file or directory: 'xclip'
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    mod = importlib.__import__(name='{2}.{0}.{1}'.format(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1466, in __import__
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/core/clipboard/clipboard_xclip.py", line 17, in <module>
+    p = subprocess.Popen(['xclip', '-version'], stdout=subprocess.PIPE,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/data/data/com.termux/files/usr/lib/python3.12/subprocess.py", line 1953, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+
+xsel - FileNotFoundError: [Errno 2] No such file or directory: 'xsel'
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    mod = importlib.__import__(name='{2}.{0}.{1}'.format(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1466, in __import__
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/core/clipboard/clipboard_xsel.py", line 16, in <module>
+    p = subprocess.Popen(['xsel'], stdout=subprocess.PIPE)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/data/data/com.termux/files/usr/lib/python3.12/subprocess.py", line 1953, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+
+[INFO   ] GL: NPOT texture support is available
+[INFO   ] Base: Start application main loop
+[INFO   ] Base: Leaving application in progress...
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/data/data/com.termux/files/home/main.py", line 59, in <module>
+[WARNING] stderr:     MonarchApp().run()
+[WARNING] stderr:   File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/app.py", line 956, in run
+[WARNING] stderr:     runTouchApp()
+[WARNING] stderr:   File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/base.py", line 574, in runTouchApp
+[WARNING] stderr:     EventLoop.mainloop()
+[WARNING] stderr:   File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/base.py", line 339, in mainloop
+[WARNING] stderr:     self.idle()
+[WARNING] stderr:   File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/base.py", line 383, in idle
+[WARNING] stderr:     self.dispatch_input()
+[WARNING] stderr:   File "/data/data/com.termux/files/usr/lib/python3.12/site-packages/kivy/base.py", line 323, in dispatch_input
+[WARNING] stderr:     provider.update(dispatch_fn=self._dispatch_input)
+[WARNING] stderr: KeyboardInterrupt

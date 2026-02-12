@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT VIGILANTE // MONARCH SYSTEM</title>
+    <style>
+        body { background: #000; color: #00e5ff; font-family: 'Courier New', monospace; text-align: center; padding: 20px; }
+        .glass-card { border: 2px solid #00e5ff; padding: 20px; border-radius: 15px; background: rgba(0, 229, 255, 0.05); box-shadow: 0 0 20px #00e5ff33; }
+        input, select { background: #111; color: #00e5ff; border: 1px solid #00e5ff; padding: 10px; margin: 10px; width: 80%; }
+        .btn { background: #00e5ff; color: #000; padding: 12px 25px; border: none; font-weight: bold; cursor: pointer; margin-top: 20px; text-transform: uppercase; }
+        .alert-red { color: #ff0055; animation: blink 1s infinite; display: none; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="glass-card">
+        <h1>[ SYSTEM: THE WHITE GHOST ]</h1>
+        <p>IDENTIFY YOURSELF TO BEGIN ASCENSION</p>
+        
+        <input type="text" id="username" placeholder="CODENAME (Ex: Shadow01)">
+        <input type="time" id="targetTime" title="Target Completion Time">
+        
+        <select id="taskType">
+            <option value="2KM_RUN">2KM RUNNING (ARMY/POLICE)</option>
+            <option value="WORKOUT">INTENSE WORKOUT</option>
+            <option value="STUDY">SSC PREP (2 HOURS)</option>
+        </select>
+
+        <button class="btn" onclick="startSystem()">INITIALIZE PROTOCOL</button>
+        
+        <div id="status" style="margin-top:20px;"></div>
+        <h2 id="penalty" class="alert-red">WARNING: SYSTEM LOCKDOWN INITIATED</h2>
+    </div>
+
+    <script>
+        function startSystem() {
+            let name = document.getElementById('username').value;
+            let time = document.getElementById('targetTime').value;
+            let task = document.getElementById('taskType').value;
+            
+            if(!name || !time) { alert("ENTER ALL DATA, SOLDIER."); return; }
+            
+            document.getElementById('status').innerHTML = `
+                <div style="border:1px solid #00e5ff; padding:10px;">
+                    <b>PLAYER:</b> ${name} <br>
+                    <b>TARGET:</b> ${task} BEFORE ${time} <br>
+                    <b>STATUS:</b> <span style="color:#0f0;">ACTIVE MONITORING...</span>
+                </div>
+            `;
+            alert("Protocol Established. Don't be late.");
+        }
+    </script>
+</body>
+</html>
+
