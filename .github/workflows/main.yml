@@ -5,11 +5,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          buildozer_version: master
-          command: buildozer android debug
+          python-version: '3.8'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsqlite3-dev zlib1g-dev
+          pip install --user --upgrade buildozer
+      - name: Build with Buildozer
+        run: |
+          buildozer android debug
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
